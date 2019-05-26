@@ -22,8 +22,8 @@ jobs:
         name: "Build docker image and put to docker hub"
         command: |
           cp Dockerfile.production Dockerfile.productiondocker
-          docker build -t ima8/example-nodejs-circle:lastest .
-          docker build -t ima8/example-nodejs-circle:${CIRCLE_SHA1} .
-          docker push ima8/example-nodejs-circle:lastest
-          docker push ima8/example-nodejs-circle:${CIRCLE_SHA1}
+          docker build -t nutpathakorn/example-nodejs-circle:lastest .
+          docker build -t nutpathakorn/example-nodejs-circle:${CIRCLE_SHA1} .
+          docker push nutpathakorn/example-nodejs-circle:lastest
+          docker push nutpathakorn/example-nodejs-circle:${CIRCLE_SHA1}
       - run: echo Done
