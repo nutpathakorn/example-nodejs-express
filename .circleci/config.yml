@@ -19,11 +19,11 @@ jobs:
       - setup_remote_docker
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - run: 
-        name: "Build docker image and put to docker hub"
-        command: |
-          cp Dockerfile.production Dockerfile.productiondocker
-          docker build -t nutpathakorn/example-nodejs-circle:lastest .
-          docker build -t nutpathakorn/example-nodejs-circle:${CIRCLE_SHA1} .
-          docker push nutpathakorn/example-nodejs-circle:lastest
-          docker push nutpathakorn/example-nodejs-circle:${CIRCLE_SHA1}
+          name: "Build docker image and put to docker hub"
+          command: |
+            cp Dockerfile.production Dockerfile.productiondocker
+            docker build -t nutpathakorn/example-nodejs-circle:lastest .
+            docker build -t nutpathakorn/example-nodejs-circle:${CIRCLE_SHA1} .
+            docker push nutpathakorn/example-nodejs-circle:lastest
+            docker push nutpathakorn/example-nodejs-circle:${CIRCLE_SHA1}
       - run: echo Done
