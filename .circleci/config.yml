@@ -34,7 +34,7 @@ jobs:
               -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
               -e CATTLE_URL="$CATTLE_URL" \
               etlweather/gaucho upgrade $RANCHER_EXAMPLE_NODEJS \
-              --imageUuid 'docker:nutpathakorn/example-nodejs-circle:latest' \
+              --imageUuid 'docker:nutpathakorn/test2:latest' \
               --batch_size 3 --start_first \
               --auto_complete --timeout 600 \
               /
