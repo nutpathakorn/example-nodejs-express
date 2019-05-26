@@ -27,8 +27,8 @@ jobs:
             docker push nutpathakorn/example-nodejs-circle:lastest
             docker push nutpathakorn/example-nodejs-circle:${CIRCLE_SHA1}
       - run:
-        name: "Call to Runcher"
-        command: |
+          name: "Call to Runcher"
+          command: |
             docker run --rm -it \
               -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
               -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
